@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
-import { chat, report, bell, settings } from "../assets";
+import { chat, report, bell, settings, user } from "../assets";
 import React from "react";
 const Navbar: React.FC = () => {
   return (
     <>
       <nav className="bg-white sticky border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto gap-8 p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto gap-4 p-4">
           <div className="flex items-center md:order-2">
             <button
               type="button"
-              className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 "
+              className="flex text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 "
               id="user-menu-button"
               aria-expanded="false"
               data-dropdown-toggle="user-dropdown"
@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
               <span className="sr-only">Open user menu</span>
               <img
                 className="w-8 h-8 rounded-full"
-                src="/docs/images/people/profile-picture-3.jpg"
+                src={user}
                 alt="user photo"
               />
             </button>
@@ -38,9 +38,7 @@ const Navbar: React.FC = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
                 ></path>
               </svg>
             </button>
@@ -80,7 +78,7 @@ const Navbar: React.FC = () => {
                   to="#"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 "
                 >
-                  My Company(Employer_Name)
+                  My_Company(Employer_Name)
                 </Link>
               </li>
               <li>
