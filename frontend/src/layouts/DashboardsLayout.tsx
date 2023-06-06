@@ -9,7 +9,7 @@ const DashboardsLayout: React.FC<DashboardsLayoutProps> = ({ children }) => {
     <>
       <Navbar />
       <Sidebar />
-      <main className="p-4 sm:ml-64">{children}</main>
+      <main className="p-4 pt-12 sm:ml-64">{children}</main>
     </>
   );
 };
