@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import {  bell, settings, user } from "../assets";
-import React from "react";
+import { bell, settings, user } from "../assets";
+import { TimeComponent } from "../components";
 const Navbar: React.FC = () => {
   return (
     <>
       <nav className="bg-white sticky border-gray-200">
-        <div className="max-w-screen-xl flex absolute right-4 items-center justify-end mx-auto gap-8 p-4">
+        <div className="max-w-screen-xl flex absolute right-4 items-center justify-between mx-auto gap-8 p-4">
           <div className="flex items-center md:order-2">
             <button
               type="button"
@@ -68,6 +68,9 @@ const Navbar: React.FC = () => {
               </li>
             </ul>
           </div>
+        </div>
+        <div>
+          <TimeComponent/>
         </div>
       </nav>
     </>

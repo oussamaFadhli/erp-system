@@ -10,28 +10,28 @@ interface GeneralStaticsDataType {
 const GeneralStaticsData: GeneralStaticsDataType[] = [
   {
     id: 1,
-    title: "Total Products",
+    title: "Products",
     icon: "/icons/product.png",
     link: "/inventory/products",
     value: "750",
   },
   {
     id: 2,
-    title: "Total Sales",
+    title: "Sales",
     icon: "/icons/bank.png",
     link: "/inventory/sales",
     value: "30,000$",
   },
   {
     id: 3,
-    title: "Total Warehouses",
+    title: "Warehouses",
     icon: "/icons/warehouse.png",
     link: "/inventory/warehouses",
     value: "120",
   },
   {
     id: 4,
-    title: "Total Stock",
+    title: "Stock",
     icon: "/icons/trolley.png",
     link: "/inventory/stock",
     value: "34000",
