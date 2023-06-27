@@ -1,5 +1,7 @@
 # Enterprise Resources Planning System
 
+##Project Status:Currently working on Inventory Management System.
+
 ## Project Description
 This project aims to create a comprehensive store management system that helps businesses streamline their operations, inventory management, sales, and customer interactions. It provides features such as inventory management, point of sale (POS), sales analytics and reporting, customer relationship management (CRM), human resources management, multi-store support, security and data protection, and a loyalty program.
 
