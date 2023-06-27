@@ -1,48 +1,13 @@
 import React from "react";
 import { DashboardCard, SubTitles } from "../components";
-interface GeneralStaticsDataType {
-  id: number;
-  title: string;
-  icon: string;
-  link: string;
-  value: string;
-}
-const GeneralStaticsData: GeneralStaticsDataType[] = [
-  {
-    id: 1,
-    title: "Products",
-    icon: "/icons/product.png",
-    link: "/inventory/products",
-    value: "750",
-  },
-  {
-    id: 2,
-    title: "Sales",
-    icon: "/icons/bank.png",
-    link: "/inventory/sales",
-    value: "30,000$",
-  },
-  {
-    id: 3,
-    title: "Warehouses",
-    icon: "/icons/warehouse.png",
-    link: "/inventory/warehouses",
-    value: "120",
-  },
-  {
-    id: 4,
-    title: "Stock",
-    icon: "/icons/trolley.png",
-    link: "/inventory/stock",
-    value: "34000",
-  },
-];
+import { GeneralStaticsDataType } from "../types";
+import { GeneralStaticsData } from "../data";
 const GeneralStatics: React.FC = () => {
   return (
     <>
       <SubTitles title="General Statics" />
       <section className="grid grid-cols-4 gap-4">
-        {GeneralStaticsData.map((data) => (
+        {GeneralStaticsData.map((data:GeneralStaticsDataType) => (
           <DashboardCard
             key={data.id}
             title={data.title}
