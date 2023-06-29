@@ -163,3 +163,6 @@ class TransactionActivity(models.Model):
     )
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
     timestamp = models.DateTimeField()
+
+    def __str__(self) -> str:
+        return self.transaction_type,self.product
