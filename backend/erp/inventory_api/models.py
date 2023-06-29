@@ -37,7 +37,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     groups = models.ManyToManyField(Group, related_name='custom_users')
     user_permissions = models.ManyToManyField(Permission, related_name='custom_users')
-    email = models.EmailField(_("Email adress"), unique=True)
+    email = models.EmailField(_("Email address"), unique=True)
     first_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50, blank=True)
     username = models.CharField(max_length=30, blank=True)
@@ -108,7 +108,7 @@ class Stock(models.Model):
     timestamp = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.category_name} {self.quantity_on_hand}"
+        return f"{self.products.product_name} {self.quantity_on_hand}"
 
 
 class Supplier(models.Model):
