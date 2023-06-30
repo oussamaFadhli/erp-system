@@ -1,8 +1,8 @@
 export interface TableRowDataType {
-  tableRowElement1: string | number | boolean;
-  tableRowElement2: string | number | boolean;
-  tableRowElement3?: string | number | boolean;
-  tableRowElement4?: string | number | boolean;
+  id: number;
+  product_name: string;
+  category_name: string;
+  selling_price: string;
 }
 
 export interface TableHeadTitle {

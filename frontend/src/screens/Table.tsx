@@ -40,16 +40,16 @@ const Table: React.FC<TableProps> = ({
                   className="whitespace-nowrap px-4 py-2 text-gray-700"
                 >
                   <td className="whitespace-nowrap px-4 py-2 text-center text-gray-700">
-                    {data.tableRowElement1}
+                    {data.id}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-center text-gray-700">
-                    {data.tableRowElement2}
+                    {data.product_name}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-center text-gray-700">
-                    {data.tableRowElement3}
+                    {data.category_name}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-center text-gray-700">
-                    {data.tableRowElement4}
+                    {data.selling_price}
                   </td>
                 </tr>
               ))}
