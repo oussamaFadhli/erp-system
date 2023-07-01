@@ -132,24 +132,21 @@ class PurchaseOrder(models.Model):
     order_date = models.DateTimeField()
     stock = models.ForeignKey(Stock, on_delete=models.CASCADE)
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
-    quantity_purchased = models.IntegerField()
+    quantity_purchased = models.IntegerField(blank=True,null=False)
     expected_delivery_date = models.DateField()
 
-    def add_new_stock(self):
-        self.stock.quantity_on_hand = (
-            self.stock.quantity_on_hand + self.quantity_purchased
-        )
-        return self.quantity_on_hand
-
     def __str__(self):
-        return f"{self.product.product_name} {self.quantity_purchased}"
+        return str(self.product)
 
 
 class SalesOrder(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     order_date = models.DateTimeField()
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
-    quantity_purchased = models.ForeignKey(PurchaseOrder, on_delete=models.CASCADE)
+    quantity_sold = models.IntegerField(blank=True,null=False)
+
+    def __str__(self):
+        return str(self.product)
 
 
 class TransactionActivity(models.Model):
@@ -165,4 +162,4 @@ class TransactionActivity(models.Model):
     timestamp = models.DateTimeField()
 
     def __str__(self) -> str:
-        return self.transaction_type,self.product
+        return f"{self.transaction_type},{self.product}"
