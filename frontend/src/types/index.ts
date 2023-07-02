@@ -1,8 +1,8 @@
 export interface TableRowDataType {
-  id: number;
-  product_name: string;
-  category_name: string;
-  selling_price: string;
+  tableRowElement1: number;
+  tableRowElement2: string;
+  tableRowElement3: string;
+  tableRowElement4: string;
 }
 
 export interface TableHeadTitle {

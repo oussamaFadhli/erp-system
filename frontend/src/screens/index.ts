@@ -1,4 +1,5 @@
 export {default as Navbar} from './Navbar'
 export {default as Sidebar} from './Sidebar'
 export {default as GeneralStatics} from './GeneralStatics'
-export {default as Table} from './Table'
+export {default as RecentlyAddedProducts} from './RecentlyAddedProducts'
+export {default as LatestSoldProductsTable} from './LatestSoldProductsTable'
